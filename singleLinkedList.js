@@ -40,22 +40,26 @@ class SingleLinkedList{
             }
             this.tail = current
             this.tail.next = null;
-            return this.tail
+            // return this.tail
         }
         this.length--
     }
 
 // Shift = Removes the first item in the array list 
     Shift(){
-     
+     if(this.head === this.tail){
+         this.head = this.tail = null
+     }
+     else{
+        let current = this.head.next
+        this.head = current
+     }
+     this.length--
     }
 
 // Unshift = Adds an item at the beginning of an array list 
 
-// Reverse list.
-
-
-
+// Reverse list. = Rverse a list from [1,2,3,4] to [4,3,2,1]
 
 // InsertAt 
 
@@ -69,8 +73,11 @@ class SingleLinkedList{
 
 // *********************** Console here **********************
 
-// let myArrayList = new SingleLinkedList();
-// myArrayList.Push("hello");
-// myArrayList.Push("hi");
-
-// console.log(myArrayList);
+let myArrayList = new SingleLinkedList();
+myArrayList.Push("One");
+// myArrayList.Push("Two");
+// myArrayList.Push("Three");
+// myArrayList.Push("Four");
+// myArrayList.Pop()
+myArrayList.Shift()
+console.log(myArrayList);
