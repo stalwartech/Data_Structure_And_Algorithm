@@ -58,8 +58,34 @@ class SingleLinkedList{
     }
 
 // Unshift = Adds an item at the beginning of an array list 
+    Unshift(data){
+        let newNode = new Node(data);
+        if(!this.head){
+            this.head = this.tail = newNode
+        }
+        else{
+            let current = this.head;
+            this.head = newNode;
+            this.head.next = current;
+        }
+        this.length++
+    }
 
 // Reverse list. = Rverse a list from [1,2,3,4] to [4,3,2,1]
+    Reverse(){
+        if(this.head === this.tail && this.length === 1){
+            this.head = this.tail
+        }
+        else{
+            let current = this.tail
+            while (current.next !== null) {
+                console.log(current)
+                this.head = current;
+                current.next = this.head.next
+            }
+        }
+        this
+    }
 
 // InsertAt 
 
@@ -75,9 +101,12 @@ class SingleLinkedList{
 
 let myArrayList = new SingleLinkedList();
 myArrayList.Push("One");
-// myArrayList.Push("Two");
-// myArrayList.Push("Three");
+myArrayList.Push("Two");
+myArrayList.Push("Three");
 // myArrayList.Push("Four");
 // myArrayList.Pop()
-myArrayList.Shift()
+// myArrayList.Shift()
+// myArrayList.Unshift("Ten")
+myArrayList.Reverse()
+
 console.log(myArrayList);

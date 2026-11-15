@@ -1,0 +1,24 @@
+Deploying the frontend 
+1. Go to the terminal and run npm run build 
+2. Go to your Cpanel 
+3. Navigate to File Manager and go to public_HTML
+4. Click on upload 
+5. Go to your folder and zip the dist or build folder
+6. Then upload the zipped file 
+7. Unzip the Zipped folder which now turns 
+
+Deploying Backend 
+1. Go to the cpanel 
+2. Go to the Setup Node.js App on the Cpanel 
+3. Click on create Application and then fill up the required below 
+i. Change nodejs version to the latest 
+ii. Chnage appliaction Mode to 
+iii. Go to the Cpanel homepage and go to Domain. Click on domain 
+iv. Create a new domain "api.domainname.com"
+v. Then you clikc on submit 
+4. Now go to the setup Nodejs App on the Cpanel 
+5. Clikc on create application and change the neccessary details 
+6. Now change the applicatuon root to api or anything 
+7. chnage the application url to your domain that is created in step 3 iv 
+8. Application startup file should now be index.js or Server.js based on what is stored there 
+9. You might skip the Environmental variable and then click on create 
