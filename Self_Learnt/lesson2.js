@@ -64,13 +64,18 @@ console.log(countConcurrenceNumber([2,2,5,7,8,9,6,2,9,1], 2))
 function removeDuplicateNumbers(numbers){
     let newArray = []
 
-    for(let i = 0; i<=numbers.length; i++){
-        for( let j = 0; j < newArray; j++){
+    for(let i = 0; i<numbers.length; i++){
+        let isDuplicate = false;
+        for( let j = 0; j < newArray.length; j++){
             if(numbers[i] ===  newArray[j]){
-                newArray.push(j)
-                console.log(`i = ${i} and j = ${j}`)
+                isDuplicate = true;
+                break;
             }
         }
+        if(!isDuplicate){
+            newArray.push(numbers[i]);
+        }
+    }
     }
     // return newArray
 }
