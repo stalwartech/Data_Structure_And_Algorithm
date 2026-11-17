@@ -58,7 +58,7 @@ function countConcurrenceNumber(number, target){
     return counter     
 }
 
-console.log(countConcurrenceNumber([2,2,5,7,8,9,6,2,9,1], 2))
+// console.log(countConcurrenceNumber([2,2,5,7,8,9,6,2,9,1], 2))
 
 // Level 3: Easy : Hard 
 function removeDuplicateNumbers(numbers){
@@ -79,14 +79,21 @@ function removeDuplicateNumbers(numbers){
     }
     // return newArray
 
-console.log(removeDuplicateNumbers([2,5,3,6,3,9])); // result [2,5,3,6,9]
+// console.log(removeDuplicateNumbers([2,5,3,6,3,9])); // result [2,5,3,6,9]
 
 // Level 3: Intermediate :Harder 
 function hasPairWithSum(numbers, target){
     // This should detrmine whether any two different elements in an array add up to a given target
-
+    for(let i = 0; i<numbers.length; i++){
+        for(let j=0; j<numbers.length; j++){
+            if( (numbers[i] + numbers[j]) === target){
+                return true
+            }
+        }
+    }
+    return false
 }
-// console.log(hasPairWithSum([2,7,11,15], 9)) // true i.e 2 + 7 = 9 
+console.log(hasPairWithSum([2,7,11,15], 26)) // true i.e 2 + 7 = 9 
 
 // Level 3: Advanced: Hardest 
 function longestIncreasingRun(numbers){
