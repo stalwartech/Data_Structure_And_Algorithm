@@ -78,7 +78,7 @@ function removeDuplicateNumbers(numbers){
     }
     }
     // return newArray
-}
+
 console.log(removeDuplicateNumbers([2,5,3,6,3,9])); // result [2,5,3,6,9]
 
 // Level 3: Intermediate :Harder 
